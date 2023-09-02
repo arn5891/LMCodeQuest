@@ -22,7 +22,5 @@ for i in range(int(input())):
   a.append(wrds)
     
   
-
-print("\n")
 for i in range(len(a)):
   print(a[i])
