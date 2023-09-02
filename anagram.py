@@ -2,8 +2,12 @@ a = []
 for i in range(int(input())):
   wrds = input()
   idk = wrds.split("|")
-  anagram = False
-  
+    
+  if idk[0] == idk[1] or len(idk[0]) != len(idk[1]):
+    wrds+=" = NOT AN ANAGRAM"
+    a.append(wrds)
+    continue
+    
   idk[0] = [*idk[0]]
   idk[1] = [*idk[1]]
   for b in range(len(idk[1])):
@@ -13,12 +17,9 @@ for i in range(int(input())):
         break
   if len(idk[0])==0:
     wrds+=" = ANAGRAM"
-    anagram = True
-    
-  if idk[0] == idk[1] or len(idk[0]) != len(idk[1]) or len(idk[0]) == len(idk[1]) and idk[0]!=idk[1]:
+  else:
     wrds+=" = NOT AN ANAGRAM"
-    a.append(wrds)
-    continue
+  a.append(wrds)
     
   
 
