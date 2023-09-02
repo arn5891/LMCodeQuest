@@ -22,5 +22,5 @@ for i in range(int(input())):
   a.append(wrds)
     
   
-for i in range(len(a)):
-  print(a[i])
+for j in range(len(a)):
+  print(a[j])
